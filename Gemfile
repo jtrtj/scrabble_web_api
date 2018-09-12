@@ -23,8 +23,10 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'pry'
-  gem 'webmock'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov'
   gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
