@@ -17,10 +17,10 @@ describe 'api/v1' do
       
       game_data = JSON.parse(response.body)
       
-      binding.pry
+      # binding.pry
       
-      expect(game_data).to have_key("game_id")
-      expect(game_data).to have_key("scores")
+      expect(game_data["data"]["attributes"]).to have_key("game_id")
+      expect(game_data["data"]["attributes"]).to have_key("scores")
     end
   end
 end
