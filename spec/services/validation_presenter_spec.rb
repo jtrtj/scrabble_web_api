@@ -7,12 +7,11 @@ describe ValidationPresenter do
       expect_response = "'foxes' is a valid word and its root form is 'fox'."
       validator = ValidationPresenter.new('foxes')
       expect(validator.get_response).to eq(expect_response)
-    end
 
-    it '#message - returns the message for the view from its results' do
-      expected_result = "'foxes' is a valid word and its root form is 'fox'."
-      validator = ValidationPresenter.new('foxes')
-      expect(validator.message).to eq(expected_result)
+      file_2 = File.read('spec/fixtures/mock_unsuccessful_validation.json')
+      expect_response = "'foxez' is not a valid word."
+      validator = ValidationPresenter.new('foxez')
+      expect(validator.get_response).to eq(expect_response)
     end
   end
 end
