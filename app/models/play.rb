@@ -14,6 +14,14 @@ class Play < ApplicationRecord
 
   private
 
-    def score_word
+  def score_word
+    self.score = letter_to_points.sum
+  end
+
+  def letter_to_points
+    each_letter = word.upcase.chars
+    each_letter.map do | letter |
+      letter_scores.fetch(letter)
     end
+  end
 end
