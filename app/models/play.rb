@@ -19,9 +19,12 @@ class Play < ApplicationRecord
   end
 
   def letter_to_points
-    each_letter = word.upcase.chars
     each_letter.map do | letter |
       letter_scores.fetch(letter)
     end
+  end
+
+  def each_letter
+    each_letter = word.upcase.chars
   end
 end
