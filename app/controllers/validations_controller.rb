@@ -1,5 +1,5 @@
 class ValidationsController < ApplicationController
   def show
-    @result = ValidationPresenter.new(params[:word])
+    @result = ValidationPresenter.new(params[:word]).get_response
   end
 end

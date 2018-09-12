@@ -1,9 +1,7 @@
 class ValidationPresenter
-  attr_reader :message
 
   def initialize(word)
     @word = word
-    @message = ""
   end
 
   def get_response
@@ -18,7 +16,7 @@ class ValidationPresenter
 
   
   private
-  
+
   def valid_json?(json)
     JSON.parse(json)
     return true
