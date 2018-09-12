@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe OxfordConnection do
   context 'class methods' do
-    it '.conn' do
+    it '.conn', :vcr do
       conn = OxfordConnection.conn
       word = 'foxes'
       response = conn.get("inflections/en/#{word}")

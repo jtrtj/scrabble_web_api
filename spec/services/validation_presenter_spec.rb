@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ValidationPresenter do
-  context 'instance methods' do
+  context 'instance methods', :vcr do
     it '#get_response - gets result from Oxford dict it will return message if word is invalid' do
       file = File.read('spec/fixtures/mock_successful_validation.json')
       expect_response = "'foxes' is a valid word and its root form is 'fox'."
