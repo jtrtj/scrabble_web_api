@@ -13,8 +13,8 @@ describe 'api/v1' do
       sal.plays.create(game: game, word: "josh", score: 14)
       sal.plays.create(game: game, word: "no", score: 2)
 
-      
-      get '/api/v1/games/1'
+
+      get "/api/v1/games/#{game.id}"
       response = JSON.parse(response.body)
       expect(repsonse).to have_key("game_id")
       expect(repsonse).to have_key("scores")
