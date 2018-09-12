@@ -1,0 +1,5 @@
+<%= form_tag( :validation, method: "get") do %>
+  <%= label_tag(:word, "Word to Validate:") %>
+  <%= text_field_tag(:word) %>
+  <%= submit_tag("Validate Word") %>
+<% end %>
