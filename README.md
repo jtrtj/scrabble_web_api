@@ -1,6 +1,6 @@
-# README
-
-## Project Setup
+## README
+This was the final exam of Mod 3 at Turing.
+### Project Setup
 
 * Project was created using Ruby 2.4.1
 * `rake db:setup`
